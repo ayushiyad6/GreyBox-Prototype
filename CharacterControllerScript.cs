@@ -14,5 +14,6 @@ public class CharacterControllerScript : MonoBehaviour
         Vector3 moveDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
         Vector3 move = transform.right * moveDirection.x + transform.forward * moveDirection.z;
 
+        controller.Move(move * moveSpeed * Time.deltaTime);
     }
 }
